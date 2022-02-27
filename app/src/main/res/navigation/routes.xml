@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routes"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/newCatFragment"
+        android:name="com.example.catlistapp.screen.catScreen.NewCatFragment"
+        android:label="new_cat_fragment"
+        tools:layout="@layout/new_cat_fragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.catlistapp.screen.listScreen.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_newCatFragment"
+            app:destination="@id/newCatFragment" />
+    </fragment>
+</navigation>
